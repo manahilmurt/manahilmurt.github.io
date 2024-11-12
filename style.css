@@ -13,6 +13,56 @@ body {
     background-color: #8f78b2;
     color: white;
 }
+body {
+    background: linear-gradient(90deg, #e4c1f9, #af8ee9);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.main-header h1 {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.9; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+
+.chat-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.floating-emoji {
+    position: absolute;
+    font-size: 1.5em;
+    animation: float 5s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+
+button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #b794f4; /* Change to a lighter purple */
+    transform: scale(1.05);    /* Slightly grow the button */
+}
 
 .main-header h1 {
     font-size: 2.5em;
@@ -90,4 +140,227 @@ main {
     background-color: #8f78b2;
     color: white;
     font-size: 0.9em;
+}
+/* 
+.confetti {
+    position: absolute;
+    border-radius: 50%;
+    animation: popOut 1s ease forwards;
+    opacity: 0.8;
+    pointer-events: none; /* Prevents confetti from interfering with clicks */
+/* } /* */
+
+/* @keyframes popOut { */
+    /* from {
+        transform: scale(1) translate(0, 0); /* Start at the click point */
+        /* opacity: 1; */
+    /* } */
+    /* to { */
+        /* transform: scale(0.8) translate(calc(-50px + 100px * random()), calc(-50px + 100px * random())); */
+        /* opacity: 0; */
+    /* } */
+/* }  */
+
+
+.confetti {
+    position: absolute;
+    border-radius: 50%;
+    animation: popOut 1s ease forwards;
+    opacity: 0.8;
+    pointer-events: none; /* Prevents confetti from interfering with clicks */
+}
+
+@keyframes popOut {
+    from {
+        transform: scale(1) translate(0, 0); /* Start at the click point */
+        opacity: 1;
+    }
+    to {
+        transform: scale(0.8) translate(calc(-50px + 100px * random()), calc(-50px + 100px * random()));
+        opacity: 0;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Centers buttons horizontally in the nav */
+    gap: 15px; /* Adds horizontal spacing between buttons */
+}
+
+.button-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 10px 20px; /* Adds padding for a more clickable area */
+    background-color: #8f78b2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b794f4; /* Light purple on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.chat-box-body {
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-box-body div:nth-child(odd) {
+    background-color: #e4e4e4;
+    color: #333;
+    align-self: flex-start; /* Aligns chatbot messages to the left */
+    border-radius: 18px 18px 18px 4px; /* Rounded bubble effect for bot messages */
+    max-width: 70%;
+    padding: 10px 15px;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.chat-box-body div:nth-child(even) {
+    background-color: #b794f4;
+    color: white;
+    align-self: flex-end; /* Aligns user messages to the right */
+    border-radius: 18px 18px 4px 18px; /* Rounded bubble effect for user messages */
+    max-width: 70%;
+    padding: 10px 15px;
+    font-size: 1em;
+    line-height: 1.4;
+    text-align: right; /* Aligns text inside the bubble to the right */
+}
+
+/* Sign-In Section */
+/* #signin-section {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#signin-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+#signin-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#signin-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#signin-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #8f78b2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#signin-form button:hover {
+    background-color: #b794f4;
+}
+
+.signup-prompt {
+    margin-top: 15px;
+}
+
+.signup-prompt a {
+    color: #8f78b2;
+    text-decoration: none;
+}
+
+.signup-prompt a:hover {
+    text-decoration: underline;
+} */
+
+/* Center and style the sign-in section */
+#signin-section {
+    max-width: 400px;
+    margin: 50px auto; /* Add space above and center */
+    text-align: center;
+    padding: 30px; /* Increase padding for more space */
+    background-color: #ffffff;
+    border-radius: 12px; /* Make corners rounder */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Add stronger shadow for depth */
+}
+
+/* Adjust form field layout */
+#signin-form .form-group {
+    margin-bottom: 20px; /* Increase spacing between form fields */
+    text-align: left;
+}
+
+/* Style labels to stand out */
+#signin-form label {
+    font-weight: bold;
+    font-size: 0.9em;
+    display: block;
+    margin-bottom: 8px; /* Add space below label */
+    color: #4a4a4a; /* Subtle color for labels */
+}
+
+/* Style input fields */
+#signin-form input {
+    width: 100%;
+    padding: 12px; /* Add padding for larger click area */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+/* Style the sign-in button */
+#signin-form button {
+    width: 100%;
+    padding: 12px; /* Add padding for a larger button */
+    background-color: #8f78b2;
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounder button */
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#signin-form button:hover {
+    background-color: #b794f4; /* Hover color */
+}
+
+/* Adjust the "Don't have an account?" prompt */
+.signup-prompt {
+    margin-top: 20px; /* Increase spacing above the prompt */
+    font-size: 0.9em;
+    color: #666;
+}
+
+.signup-prompt a {
+    color: #8f78b2;
+    text-decoration: none;
+}
+
+.signup-prompt a:hover {
+    text-decoration: underline;
 }

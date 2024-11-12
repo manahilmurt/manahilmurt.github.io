@@ -8,19 +8,23 @@
     <link rel="icon" type="image/png" href="./logo.png" />
 </head>
 <body>
+
     <!-- Main Page Structure -->
     <header class="main-header">
         <h1 onclick="navigateTo('welcome')" style="cursor: pointer;">SoulReflect</h1>
         <nav>
-            <button onclick="navigateTo('about')">About</button>
-            <button onclick="navigateTo('journal')">Journal</button>
-            <button onclick="navigateTo('notes')">Notes</button>
-            <button onclick="navigateTo('contact')">Contact</button>
-            <button onclick="navigateTo('signup')">Sign Up</button>
-            <button onclick="navigateTo('main-journaling')">Journaling</button>
+            <div class="button-wrapper"><button onclick="navigateTo('about')">About</button></div>
+            <div class="button-wrapper"><button onclick="navigateTo('notes')">Notes</button></div>
+            <div class="button-wrapper"><button onclick="navigateTo('contact')">Contact</button></div>
+            <!-- <div class="button-wrapper"><button onclick="navigateTo('signup')">Sign Up</button></div> -->
+            <div class="button-wrapper"><button onclick="navigateTo('main-journaling')">Journaling</button></div>
+            <button onclick="navigateTo('signin')">Sign In</button>
+
         </nav>
     </header>
 
+    
+    
     <main id="main-content">
         <!-- Welcome Screen -->
         <section id="welcome-section">
@@ -28,9 +32,49 @@
             <p>Your personalized AI journaling tool for emotional clarity and mental well-being.</p>
             <button onclick="navigateTo('main-journaling')">Ready to Engage</button>
         </section>
+        
+
+        <section id="about-section" class="hidden">
+            <h2>About SoulReflect</h2>
+            <p>SoulReflect is an AI-powered journaling tool that guides users through personalized questions to help them reflect on their emotions and behaviors. It adapts in real-time based on user input, to help them reflect on their emotions and behaviors. It adapts in real-time based on user input, providing a unique and tailored introspective experience. Designed for students, professionals, and anyone seeking personal growth, SoulReflect offers a simple interface and meaningful reflection, making it easier to gain clarity and self-awareness.</p>
+            <button onclick="navigateTo('main-journaling')">Ready to Engage</button>
+        </section>
+        
+        <section id="contact-section" class="hidden">
+            <h2>Contact SoulReflect</h2>
+            <p>Email: contact@soulreflect.com</p>
+            <p>Phone: 1-800-SOULREFLECT</p>
+            <p>Instagram: SOULREFLECT</p>
+        </section>
+
+        <!-- Sign In Section COMMAND-->
+        <!-- Sign In Section -->
+        <section id="signin-section" class="hidden">
+            <h2>Sign In to SoulReflect</h2>
+            <form id="signin-form" onsubmit="handleSignIn(event)">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required />
+                </div>
+                <button type="submit">Sign In</button>
+            </form>
+            <p class="signup-prompt">Don't have an account? <a href="#" onclick="navigateTo('signup')">Sign Up</a></p>
+        </section>
+<!-- END CODEEEDDD -->
 
         <!-- Chat Page (Main Journaling Page) -->
         <section id="main-journaling-section" class="hidden">
+            <h2>Journal Prompts</h2>
+            <p>Interact with our AI to reflect on these prompts:</p>
+            <ul>
+                <li>“What are you grateful for today?”</li>
+                <li>“What challenged you today?”</li>
+                <li>“What did you learn about yourself today?”</li>
+            </ul>
             <div class="chat-box">
                 <div class="chat-box-header">SoulReflect</div>
                 <div class="chat-box-body" id="chat-box">
@@ -50,27 +94,15 @@
             </div>
         </section>
 
-        <!-- Journal Prompts Page -->
-        <section id="journal-section" class="hidden">
-            <h2>Journal Prompts</h2>
-            <p>Interact with our AI to reflect on these prompts:</p>
-            <ul>
-                <li>“What are you grateful for today?”</li>
-                <li>“What challenged you today?”</li>
-                <li>“What did you learn about yourself today?”</li>
-            </ul>
-        </section>
-
-        <!-- Notes Page -->
         <section id="notes-section" class="hidden">
             <h2>Your Notes</h2>
             <textarea placeholder="Write your thoughts here..."></textarea>
         </section>
     </main>
 
-    <footer class="codingnexus">
+    <!-- <footer class="codingnexus">
         <a>Created by Soul Reflect</a>
-    </footer>
+    </footer> -->
 
     <script src="script.js"></script>
 </body>

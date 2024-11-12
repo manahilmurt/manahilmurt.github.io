@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #e4c1f9, #af8ee9);
+    color: #4a4a4a;
+    margin: 0;
+}
+
+.main-header {
+    text-align: center;
+    padding: 20px;
+    background-color: #8f78b2;
+    color: white;
+}
+
+.main-header h1 {
+    font-size: 2.5em;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.chat-box {
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.chat-box-header {
+    background-color: #b794f4;
+    color: white;
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+.chat-box-body {
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.chat-box-footer {
+    display: flex;
+    padding: 10px;
+}
+
+.chat-box-footer input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.chat-box-footer button {
+    background-color: #8f78b2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.emoji-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.emoji-container button {
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.codingnexus {
+    text-align: center;
+    padding: 10px;
+    background-color: #8f78b2;
+    color: white;
+    font-size: 0.9em;
+}

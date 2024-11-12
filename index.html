@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulReflect</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="./logo.png" />
+</head>
+<body>
+    <!-- Main Page Structure -->
+    <header class="main-header">
+        <h1 onclick="navigateTo('welcome')" style="cursor: pointer;">SoulReflect</h1>
+        <nav>
+            <button onclick="navigateTo('about')">About</button>
+            <button onclick="navigateTo('journal')">Journal</button>
+            <button onclick="navigateTo('notes')">Notes</button>
+            <button onclick="navigateTo('contact')">Contact</button>
+            <button onclick="navigateTo('signup')">Sign Up</button>
+            <button onclick="navigateTo('main-journaling')">Journaling</button>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Welcome Screen -->
+        <section id="welcome-section">
+            <h2>Welcome to SoulReflect</h2>
+            <p>Your personalized AI journaling tool for emotional clarity and mental well-being.</p>
+            <button onclick="navigateTo('main-journaling')">Ready to Engage</button>
+        </section>
+
+        <!-- Chat Page (Main Journaling Page) -->
+        <section id="main-journaling-section" class="hidden">
+            <div class="chat-box">
+                <div class="chat-box-header">SoulReflect</div>
+                <div class="chat-box-body" id="chat-box">
+                    <div class="response">
+                        <p>Welcome to SoulReflect, how can I help you today?</p>
+                    </div>
+                </div>
+                <div class="chat-box-footer">
+                    <input type="text" id="user-input" placeholder="Ask a question or start journaling..." />
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+                <div class="emoji-container">
+                    <button onclick="sendMood('happy')">😊</button>
+                    <button onclick="sendMood('neutral')">😐</button>
+                    <button onclick="sendMood('sad')">😢</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journal Prompts Page -->
+        <section id="journal-section" class="hidden">
+            <h2>Journal Prompts</h2>
+            <p>Interact with our AI to reflect on these prompts:</p>
+            <ul>
+                <li>“What are you grateful for today?”</li>
+                <li>“What challenged you today?”</li>
+                <li>“What did you learn about yourself today?”</li>
+            </ul>
+        </section>
+
+        <!-- Notes Page -->
+        <section id="notes-section" class="hidden">
+            <h2>Your Notes</h2>
+            <textarea placeholder="Write your thoughts here..."></textarea>
+        </section>
+    </main>
+
+    <footer class="codingnexus">
+        <a>Created by Soul Reflect</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
